@@ -1,22 +1,17 @@
 export const MenuItems = [
   {
-    title: 'Marketing',
+    title: 'Todos os Projetos',
     path: '/marketing',
     cName: 'dropdown-link'
   },
   {
-    title: 'Consulting',
+    title: 'Novo Projeto Interno',
     path: '/consulting',
     cName: 'dropdown-link'
   },
   {
-    title: 'Design',
+    title: 'Novo Projeto BoxUp',
     path: '/design',
-    cName: 'dropdown-link'
-  },
-  {
-    title: 'Development',
-    path: '/development',
     cName: 'dropdown-link'
   }
 ];

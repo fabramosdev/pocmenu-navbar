@@ -3,6 +3,7 @@ import { Button } from './Button';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import Dropdown from './Dropdown';
+import logoImg from '../assets/logo.svg'
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -31,8 +32,7 @@ function Navbar() {
     <>
       <nav className='navbar'>
         <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-          EPIC
-          <i class='fab fa-firstdraft' />
+          <img src={logoImg} alt='BoxUp' width={48} />
         </Link>
         <div className='menu-icon' onClick={handleClick}>
           <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
@@ -40,7 +40,7 @@ function Navbar() {
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
           <li className='nav-item'>
             <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-              Home
+              Dashboard
             </Link>
           </li>
           <li
@@ -53,7 +53,7 @@ function Navbar() {
               className='nav-links'
               onClick={closeMobileMenu}
             >
-              Services <i className='fas fa-caret-down' />
+              Projetos <i className='fas fa-caret-down' />
             </Link>
             {dropdown && <Dropdown />}
           </li>
@@ -63,7 +63,7 @@ function Navbar() {
               className='nav-links'
               onClick={closeMobileMenu}
             >
-              Products
+              Pipeline
             </Link>
           </li>
           <li className='nav-item'>
@@ -72,7 +72,7 @@ function Navbar() {
               className='nav-links'
               onClick={closeMobileMenu}
             >
-              Contact Us
+              Sobre Nós
             </Link>
           </li>
           <li>
@@ -81,7 +81,7 @@ function Navbar() {
               className='nav-links-mobile'
               onClick={closeMobileMenu}
             >
-              Sign Up
+              Logout
             </Link>
           </li>
         </ul>
